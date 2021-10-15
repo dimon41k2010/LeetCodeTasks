@@ -9,3 +9,6 @@ class Solution:
 
 # Time: O(n + m) m=stones, (O(1) set(n)=jewels)
 # Space: O(n)
+
+# second option
+#print( sum(stones.count(jewel) for jewel in jewels) )
