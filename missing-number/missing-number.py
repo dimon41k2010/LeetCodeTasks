@@ -14,15 +14,23 @@ class Solution:
     
     
         # s = set(nums)
-        s = set()
-        for val in nums:
-            s.add(val)
-        for val in s:
-            if val == 0:
-                continue
-            if val-1 not in s:
-                return val-1
-        return len(nums)
+        # s = set()
+        # for val in nums:
+        #     s.add(val)
+        # for val in s:
+        #     if val == 0:
+        #         continue
+        #     if val-1 not in s:
+        #         return val-1
+        # return len(nums)
     
     # Time: O(n)
     #Space: O(n)
+    
+        nums.append(-1) 
+        for i in range(len(nums)):  
+            while i != nums[i] and nums[i] != -1:
+                nums[nums[i]], nums[i] = nums[i], nums[nums[i]] 
+        for i in range(len(nums)):
+            if nums[i] == -1:
+                return i
