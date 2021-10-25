@@ -15,3 +15,20 @@ class Solution:
 
 #Time: O(N1*W1) + O(N2*W2)
 #Space: O(N)  // N = len(N1)
+
+
+#Second solution with Space: O(1)
+#         i, j = 0, 0
+#         for sub_word in word1:
+#             for letter in sub_word:
+#                 if i == -1 or letter != word2[i][j]:
+#                     return False
+#                 i, j = next_(word2, i, j)
+#         return i == -1
+
+# def next_(word, i, j):
+#     if j < len(word[i]) - 1:
+#         return i, j + 1
+#     if i < len(word) - 1:
+#         return i + 1, 0
+#     return -1, -1
