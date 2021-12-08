@@ -1,8 +1,10 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
         
-        
-        def pow(x, n):
+        memo = {}
+        def pow_f(x, n):
+            if n in memo:
+                return memo[n]
             if n == 0:
                 return 1
             if n == 1:
@@ -10,7 +12,10 @@ class Solution:
             if n == -1:
                 return 1/x
             if n % 2 != 0:
-                return x * pow(x * x, n // 2)
+                memo[n] = x * pow_f(x * x, n // 2)
+                return memo[n]
 
-            return pow(x * x, n // 2)
-        return (pow(x, n))
+            memo[n] = pow_f(x * x, n // 2)
+            return memo[n]
+        
+        return (pow_f(x, n))
