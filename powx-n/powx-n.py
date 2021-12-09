@@ -19,3 +19,7 @@ class Solution:
             return memo[n]
         
         return (pow_f(x, n))
+    
+
+#Time: O(log N)
+#Space: O(log N)
