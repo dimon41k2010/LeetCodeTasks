@@ -3,12 +3,17 @@ class Solution:
         
         memo = {}
         def pow_f(x, n):
+            
+            # Error check
+            if x == 0:
+                return 0
             if n in memo:
                 return memo[n]
             if n == 0:
                 return 1
             if n == 1:
                 return x
+            
             if n == -1:
                 return 1/x
             if n % 2 != 0:
