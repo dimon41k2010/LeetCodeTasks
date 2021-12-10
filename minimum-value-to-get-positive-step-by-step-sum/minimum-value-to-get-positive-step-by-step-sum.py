@@ -17,4 +17,5 @@ class Solution:
             start_value += 1
     
     
-            
+# Time: O(N^2)
+# Space: O(1)
