@@ -1,11 +1,24 @@
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+            
+            
+            
         max_candies = max(candies)
-        # print(max_candies)
-        res = []
-        for candy in candies:
-            if candy + extraCandies >= max_candies:
-                res.append(True)
+        for i in range(len(candies)):
+            if candies[i] + extraCandies >= max_candies:
+                candies[i] = True
             else:
-                res.append(False)
-        return (res)
+                candies[i] = False
+        return(candies)             # rewriting to the same list
+
+#Time: O(N)
+#Space: O(1)
+    
+
+    # 2nd better solution using list comprehension
+
+        max_candies = max(candies)
+        return ([ "true1" if candy+extraCandies >= max_candies else "false" for candy in candies ])
+        
+#Time: O(N^2)
+#Space: O(N)
