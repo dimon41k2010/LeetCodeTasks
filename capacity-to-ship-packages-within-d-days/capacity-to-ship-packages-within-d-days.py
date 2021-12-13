@@ -6,7 +6,7 @@ class Solution:
             counter = 0
 
             for weight in weights:
-                # print("this ",single_ship, weight,counter )
+                # print("this ",single_ship, weight,counter)
                 if single_ship + weight <= capacity:
                     single_ship += weight
                 else:
@@ -19,8 +19,6 @@ class Solution:
                 # print(single_ship, weight,counter)
             return True
 
-# print(possible_capacity(7))
-
         left, right = max(weights), sum(weights)
         while left <= right:
             mid = (left + right) // 2
@@ -29,3 +27,6 @@ class Solution:
             else:                       # if NOT True
                 left = mid + 1
         return(left)
+    
+#Time: O(log N) * O(N) = O(N log N)
+#Space: O(1)
