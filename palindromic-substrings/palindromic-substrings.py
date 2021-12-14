@@ -15,4 +15,6 @@ class Solution:
         return(sum([ row.count(True) for row in dp  ]))
 
         
-    
+#Time: O(N^2) + O(N^2) + O(N^2) = O(N^2)
+#Space: O(N^2)
+
