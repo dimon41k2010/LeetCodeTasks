@@ -1,6 +1,7 @@
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        
+     
+    
         n = len(s) 
         dp = [[False] * n  for _ in range(n)]
         
@@ -17,11 +18,11 @@ class Solution:
                         if maxLen < end - start + 1:
                             maxLen = end - start + 1
                             ans = s[start: end+ 1]
-        
+    
         return ans
         
 
-        # Original solution. Leetcode has TLE with this solution.     
+        # 2nd: Original solution. Leetcode has TLE with this solution.     
         
         dp = [ [False for j in range(len(s)) ] for i in range(len(s))]  #Time: O(N^2)
         # print(dp)
