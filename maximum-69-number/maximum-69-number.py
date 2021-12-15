@@ -12,3 +12,8 @@ class Solution:
             return(num)
         else:
             return (int(str_num[:i] + "9" + str_num[i+1:]))
+        
+# Time: O(N) 
+# Space: O(N)
+
+
