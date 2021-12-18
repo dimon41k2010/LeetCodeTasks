@@ -20,7 +20,7 @@ class Solution:
 #Space: O(1)
         
         
-        
+# 2nd and original solution, didn't work with edge cases   
         active_zero = 0
         for i in range(len(arr)):
             if arr[i] == 0 :
