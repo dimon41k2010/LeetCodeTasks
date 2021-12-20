@@ -24,3 +24,27 @@ class Solution:
 
 #Time: O(Log N) + O(Log N) => O(Log N)
 #Space: O(1)
+
+
+#===== Recursion solution
+        def product_recur(n):
+            if n == 0:
+                return 1
+
+            digit = n % 10
+
+            return digit * product_recur(n // 10)
+
+        def sum_recur(n):
+            if n == 0:
+                return 0
+
+            digit = n % 10
+
+            return digit + sum_recur(n // 10)
+
+        return (product_recur(n) - sum_recur(n))
+
+#Time: O(Log N) + O(Log N) => O(Log N)
+#Space: O(Log N) + O(Log N) => O(Log N)
+
