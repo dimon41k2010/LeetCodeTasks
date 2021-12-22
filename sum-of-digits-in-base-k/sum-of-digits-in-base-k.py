@@ -17,3 +17,13 @@ class Solution:
 #Time: O(Log(k) N)
 #Space: O(Log(k) N)
 
+
+# iterative 
+        res = 0
+        while n > 0:
+            res += n % k
+            n = n // k
+        return res
+
+#Time: O(Log(k) N)
+#Space: O(1)
