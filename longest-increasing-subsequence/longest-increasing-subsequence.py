@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
+        
         dp = [1]
 
         for i in range(1, len(nums)):
@@ -10,3 +11,6 @@ class Solution:
                     dp_res = max(dp_res, dp[j])
             dp.append(dp_res+1)
         return max(dp)
+    
+#Time: O(N^2)
+#Space: O(N)
