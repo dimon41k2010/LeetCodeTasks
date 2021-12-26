@@ -21,3 +21,6 @@ class Solution:
 
                     dp[i][j] = max(val_top, val_left)
         return(dp[-1][-1])
+    
+#Time: O(N^2)
+#Space: O(N^2)
