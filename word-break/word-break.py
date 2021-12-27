@@ -26,5 +26,5 @@ class Solution:
         return solve_recur(0, s)
 
 
-# Time: O(N ^ 26)  
+# Time: O(N ^ 2) 
 # Space: O(N) // N=len(s)
