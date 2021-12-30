@@ -2,16 +2,13 @@ class Solution:
     def numDecodings(self, s: str) -> int:
         
         dp = [-1 for _ in s]
-        # print(dp)
 
         def solve_recur(i):
 
             if i == len(s):
                 return 1
-
             if dp[i] != -1:
                 return dp[i]
-
             if s[i] == "0":
                 dp[i] = 0
                 return dp[i]
@@ -25,3 +22,7 @@ class Solution:
             return dp[i]
 
         return (solve_recur(0))
+    
+    
+# Time: O(N)
+# Space: O(N)
