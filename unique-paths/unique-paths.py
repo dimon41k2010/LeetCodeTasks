@@ -2,9 +2,7 @@ class Solution:
     def uniquePaths(self, R: int, C: int) -> int:
         
         dp = [ [ 0 for c in range(C) ] for r in range(R) ]
-        # print(dp)
         dp[-1][-1] = 1
-        # print(dp)
 
         def solve_recur(r,c):
 
@@ -20,3 +18,8 @@ class Solution:
             return dp[r][c]
 
         return (solve_recur(0,0))
+    
+    
+# Time: O(N * M) => O(R * C)
+# Space: O(N * M) => O(R * C)
+
