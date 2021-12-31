@@ -6,3 +6,6 @@ class Solution:
             n = len(nums)
             ans[i], ans[i+n] = nums[i], nums[i]
         return (ans)
+    
+# Time: O(N)
+# Space: O(N)
