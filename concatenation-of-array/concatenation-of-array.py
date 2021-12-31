@@ -9,3 +9,9 @@ class Solution:
     
 # Time: O(N)
 # Space: O(N)
+
+# Pythonic
+        return nums * 2
+
+# Time: O(N)
+# Space: O(1)
