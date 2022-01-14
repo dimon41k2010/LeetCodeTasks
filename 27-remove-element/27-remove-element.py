@@ -1,5 +1,6 @@
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+        
         replace_index = 0
 
         for current_index in range(0, len(nums)):
