@@ -1,25 +1,26 @@
 class Solution:
     def dominantIndex(self, nums: List[int]) -> int:
 
-#         bigest_int_index = 0
+        bigest_int_index = 0
 
-#         if len(nums) <= 1:
-#             return 0
-#         for i in range(0, len(nums)):   # O(n) | Space: O(1) + O(n)
-#             if nums[bigest_int_index] < nums[i]:    # nums = [3,4,1,0,9]
-#                 bigest_int_index = i
+        if len(nums) <= 1:
+            return 0
+        for i in range(0, len(nums)):   # O(n) | Space: O(1) + O(n)
+            if nums[bigest_int_index] < nums[i]:    # nums = [3,4,1,0,9]
+                bigest_int_index = i
 
-#         print(bigest_int_index)
-#         for i in range(0, len(nums)): 
-#             if i  == bigest_int_index:
-#                 continue
-#             if nums[bigest_int_index] / 2 < nums[i]:
-#                 return -1
+        print(bigest_int_index)
+        for i in range(0, len(nums)): 
+            if i  == bigest_int_index:
+                continue
+            if nums[bigest_int_index] / 2 < nums[i]:
+                return -1
         
-#         return bigest_int_index
+        return bigest_int_index
         
     #Time: O(n)
     #Space: O(1)
+    
     
     # solution 2nd
     
@@ -39,6 +40,7 @@ class Solution:
         if nums[b_i] >= nums[p_b_i] * 2: 
             return b_i
         return -1
+    
     
     #Time: O(n)
     #Space: O(1)
