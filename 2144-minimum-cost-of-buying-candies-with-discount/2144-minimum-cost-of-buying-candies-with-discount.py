@@ -15,9 +15,9 @@ class Solution:
 # Space: O(1)
         
     
-        # cost.sort()      # Time: O(N lon N)
-        # cost.reverse()   # Time: O(N)
-        # return (sum([ val for i, val in enumerate(cost) if (i+1) % 3 != 0 ]))
+        cost.sort()      # Time: O(N lon N)
+        cost.reverse()   # Time: O(N)
+        return (sum([ val for i, val in enumerate(cost) if (i+1) % 3 != 0 ]))
 
 # Time: O(N lon N) + O(N) + O(N) = O(N lon N)
 # Space: O(N/3) = O(N)
