@@ -23,5 +23,6 @@ class Solution:
 
  # Solution 3
         return all([ not (s[i-1] == 'b' and s[i] == 'a') for i in range(1,len(s)) ])
+    
 # Time: O(N)
 # Space: O(N)
