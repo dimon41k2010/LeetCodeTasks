@@ -1,13 +1,13 @@
 class Solution:
     def checkString(self, s: str) -> bool:
  # Solution 1      
-        is_b = False
-        for char in s:
-            if char == "b":
-                is_b = True
-            elif is_b == True and char == "a":
-                return False
-        return True
+        # is_b = False
+        # for char in s:
+        #     if char == "b":
+        #         is_b = True
+        #     elif is_b == True and char == "a":
+        #         return False
+        # return True
     
 # Time: O(N)
 # Space: O(1)
