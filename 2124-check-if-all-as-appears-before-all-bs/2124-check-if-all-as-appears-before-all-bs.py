@@ -1,5 +1,6 @@
 class Solution:
     def checkString(self, s: str) -> bool:
+ # Solution 1      
         is_b = False
         for char in s:
             if char == "b":
@@ -11,15 +12,16 @@ class Solution:
 # Time: O(N)
 # Space: O(1)
 
-#         for i in range(1,len(s)):
-#             if s[i-1] == 'b' and s[i] == 'a':
-#                 return False
-#         return True
+ # Solution 2
+        for i in range(1,len(s)):
+            if s[i-1] == 'b' and s[i] == 'a':
+                return False
+        return True
     
 # Time: O(N)
 # Space: O(1)
 
-
-        # return all([ not (s[i-1] == 'b' and s[i] == 'a') for i in range(1,len(s)) ])
+ # Solution 3
+        return all([ not (s[i-1] == 'b' and s[i] == 'a') for i in range(1,len(s)) ])
 # Time: O(N)
 # Space: O(N)
