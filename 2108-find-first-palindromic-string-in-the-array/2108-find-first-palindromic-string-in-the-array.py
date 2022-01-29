@@ -15,9 +15,7 @@ class Solution:
         for word in words:
             if is_palindrome(word):
                 return word
-
         return ""
-
 
 # Time: O(N * W) // W=len(word)
 # Space: O(1) 
