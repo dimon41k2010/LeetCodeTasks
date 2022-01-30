@@ -21,9 +21,7 @@ class Solution:
                 ones -= 1
             if nums[i] == 0:
                 zeros += 1
-
         return res
-
 
 # Time: O(N)
 # Space: O(1)
