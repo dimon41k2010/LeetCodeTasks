@@ -15,6 +15,7 @@ class Solution:
         sub_range = sub_upper - sub_lower
         range_ = upper - lower
         res = range_ - sub_range + 1
+        
         return res if res > 0 else 0
 
 # Time: O(N)
