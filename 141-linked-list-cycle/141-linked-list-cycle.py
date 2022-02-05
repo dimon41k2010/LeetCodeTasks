@@ -6,13 +6,25 @@
 
 class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
-        set_ = set()
-        while head != None:
-            if head.__hash__() in set_:
-                return True
-            set_.add(head.__hash__())
-            head = head.next
-        return False
+        # set_ = set()
+        # while head != None:
+        #     if head.__hash__() in set_:
+        #         return True
+        #     set_.add(head.__hash__())
+        #     head = head.next
+        # return False
 
 # Time: O(N)
 # Space: O(N)
+
+# 2nd Solution using O(1)
+        red = blue = head 
+        
+        while blue and blue.next:
+            blue = blue.next.next
+            red = red.next
+            if red == blue: 
+                return True
+        return False
+            
+        
