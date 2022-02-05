@@ -12,9 +12,9 @@ class Solution:
         while head and head.next:
             while head.next and val == head.next.val:
                 head.next = head.next.next
-            if head == None: 
-                break
+           
             head = head.next
+        
         if res.val == val:
             return res.next
         return res
