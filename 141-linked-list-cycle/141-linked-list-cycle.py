@@ -17,14 +17,16 @@ class Solution:
 # Time: O(N)
 # Space: O(N)
 
-# 2nd Solution using O(1)
-        red = blue = head 
+
+#===== 2nd Solution using O(1)
         
+        red = blue = head 
         while blue and blue.next:
             blue = blue.next.next
             red = red.next
             if red == blue: 
                 return True
         return False
-            
-        
+    
+# Time: O(N)
+# Space: O(1)
