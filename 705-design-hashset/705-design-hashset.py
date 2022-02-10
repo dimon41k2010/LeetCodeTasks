@@ -8,7 +8,7 @@ class MyHashSet:
         
     
     def __init__(self):
-        self.n = 1000000
+        self.n = 100000
         self.array = [ None for i in range(self.n) ] 
 
     def add(self, key: int) -> None:
