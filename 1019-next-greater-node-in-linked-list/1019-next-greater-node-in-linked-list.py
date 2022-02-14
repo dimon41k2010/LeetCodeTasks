@@ -11,20 +11,20 @@ class Solution:
             if not node:
                 return [], [0]
             
-            rest_list, rest_max = solver(node.next)
-            while rest_max and node.val >= rest_max[-1]:
-                rest_max.pop()
-            if not rest_max: 
+            rest_list, stack = solver(node.next)
+            while stack and node.val >= stack[-1]:
+                stack.pop()
+            if not stack: 
                 rest_list.append(0)
             else:
-                rest_list.append(rest_max[-1])
+                rest_list.append(stack[-1])
             
-            rest_max.append(node.val)
+            stack.append(node.val)
             
-            return rest_list, rest_max
+            return rest_list, stack
             
-        res_link_list, _ = solver(head)
+        res, _ = solver(head)
        
-        return res_link_list[::-1]
+        return res[::-1]
         
         
