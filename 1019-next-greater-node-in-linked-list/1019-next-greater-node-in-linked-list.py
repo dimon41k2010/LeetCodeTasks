@@ -9,26 +9,22 @@ class Solution:
         def solver(node):
             
             if not node:
-                return None, [0]
+                return [], [0]
             
             rest_list, rest_max = solver(node.next)
-            curr_node = None
             while rest_max and node.val >= rest_max[-1]:
                 rest_max.pop()
             if not rest_max: 
-                curr_node = ListNode(0, rest_list)
+                rest_list.append(0)
             else:
-                curr_node = ListNode(rest_max[-1], rest_list)
+                rest_list.append(rest_max[-1])
             
             rest_max.append(node.val)
             
-            return curr_node, rest_max
+            return rest_list, rest_max
             
         res_link_list, _ = solver(head)
-        res = []
-        while res_link_list:
-            res.append(res_link_list.val)
-            res_link_list = res_link_list.next
-        return res
+       
+        return res_link_list[::-1]
         
         
