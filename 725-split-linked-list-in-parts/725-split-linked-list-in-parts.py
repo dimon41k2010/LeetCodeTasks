@@ -15,6 +15,7 @@ class Solution:
         remainings = length % k  # 3 % 5 = 3
         base_len = length // k  # 3 // 5 = 0
         res = []
+        
         node = head
         for _ in range(k):
             if not node:
@@ -35,3 +36,6 @@ class Solution:
             remainings -= 1
         
         return res
+    
+# Time: O(N)
+# Space: O(1)
