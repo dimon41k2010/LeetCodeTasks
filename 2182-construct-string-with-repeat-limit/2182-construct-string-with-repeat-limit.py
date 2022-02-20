@@ -1,9 +1,8 @@
 class Solution:
     def repeatLimitedString(self, s: str, repeatLimit: int) -> str:
         count = Counter(s)
-        # print(count)
-
         letter = "z"
+        
         # print(ord(letter))
         # print(chr(ord('a')-1))
         res = []
@@ -32,6 +31,11 @@ class Solution:
                     back_up_letter = letter
 
             letter = chr(ord(letter)-1)
-            # print(letter)
-        # print(res)
+
         return (''.join(res))
+    
+    
+# Time: O(N)
+# Space: O(1)
+    
+    
