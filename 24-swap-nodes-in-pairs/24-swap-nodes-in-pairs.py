@@ -6,20 +6,34 @@
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
-        node = ListNode(-1, head)
-        res = node      
+#         node = ListNode(-1, head)
+#         res = node      
         
-        while node and node.next and node.next.next:
-            prev_node = node
-            current_node = node.next
-            next_node = node.next.next
-            next_next_node = node.next.next.next
+#         while node and node.next and node.next.next:
+#             prev_node = node
+#             current_node = node.next
+#             next_node = node.next.next
+#             next_next_node = node.next.next.next
             
-            prev_node.next = next_node
-            current_node.next = next_next_node
-            next_node.next = current_node
+#             prev_node.next = next_node
+#             current_node.next = next_next_node
+#             next_node.next = current_node
             
-            node = current_node
+#             node = current_node
                
-        return res.next
+#         return res.next
     
+    
+# Time: O(N)
+# Space: O(1)
+
+# recursion 
+
+        if not head or not head.next:
+            return head 
+        
+        next_node = head.next
+        head.next = self.swapPairs(next_node.next)
+        next_node.next = head
+        
+        return next_node
