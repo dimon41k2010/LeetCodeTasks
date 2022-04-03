@@ -8,29 +8,29 @@ class Solution:
                 
         res = []
         #first solution
-        # j = 0
-        # for i in range(len(nums)):
-        #     while abs(i-temp[j]) > k:
-        #         if i - temp[j] < 0:
-        #             break
-        #         j += 1
-        #         if j > len(temp):
-        #             print(res)
-        #     else:
-        #         res.append(i)
-        # print(res)
+        j = 0
+        for i in range(len(nums)):
+            while abs(i-temp[j]) > k:
+                if i - temp[j] < 0:
+                    break
+                j += 1
+                if j >= len(temp):
+                    return(res)
+            else:
+                res.append(i)
+        return (res)
 
         #second solution
-        i = j = 0
-        while i < len(nums) and j < len(temp):
-            if abs(i - temp[j]) <= k:
-                res.append(i)
-                i += 1
-            elif i - temp[j] < 0:
-                i += 1
-            elif i - temp[j] > 0:
-                j += 1
-        return (res)
+        # i = j = 0
+        # while i < len(nums) and j < len(temp):
+        #     if abs(i - temp[j]) <= k:
+        #         res.append(i)
+        #         i += 1
+        #     elif i - temp[j] < 0:
+        #         i += 1
+        #     elif i - temp[j] > 0:
+        #         j += 1
+        # return (res)
 
 # Time: O(N)
 # Space: O(N)
