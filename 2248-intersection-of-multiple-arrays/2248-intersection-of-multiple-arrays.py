@@ -1,14 +1,14 @@
 class Solution:
     def intersection(self, nums: List[List[int]]) -> List[int]:
         
-#         sets = [set(num) for num in nums]
-#         res = []
+        sets = [set(num) for num in nums]
+        res = []
 
-#         for num in nums[0]:
-#             if all([num in set_ for set_ in sets]):
-#                 res.append(num)
+        for num in nums[0]:
+            if all([num in set_ for set_ in sets]):
+                res.append(num)
 
-#         return (sorted(res))
+        return (sorted(res))
 
 # Time: O(N * L) // N = len(nums), L = len(nums[0])
 # Space: O(N * L)
