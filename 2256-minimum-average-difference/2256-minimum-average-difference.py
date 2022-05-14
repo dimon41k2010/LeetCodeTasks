@@ -5,6 +5,7 @@ class Solution:
         right = sum(nums) - left
         value = sum(nums) + 10000
         res = -1
+        
         for i in range(1, len(nums)+1):
             right_side = 0 if len(nums)-i == 0 else right // (len(nums)-i)
             candidate = abs((left // i) - right_side)
