@@ -19,7 +19,7 @@ class Solution:
         prev = None
         res = []
         for word in words:
-            sorted_word = sorted_cust(word)
+            sorted_word = sorted(word)
             if sorted_word != prev:
                 prev = sorted_word
                 res.append(word)
