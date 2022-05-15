@@ -17,13 +17,12 @@ class Solution:
             return ''.join(res)
 
         
-        set_ = set()
+        prev = None
         res = []
         for word in words:
             sorted_word = sorted(word)
-            if sorted_word not in set_:
-                set_ = set()
-                set_.add(sorted_word)
+            if sorted_word != prev:
+                prev = sorted_word
                 res.append(word)
         return (res)
 
