@@ -1,7 +1,7 @@
 class Solution:
     def removeAnagrams(self, words: List[str]) -> List[str]:
         
-        def sorted(word):  # O(N)
+        def sorted_cust(word):  # O(N)
             d = {}
             for char in word:
                 if char not in d.keys():
@@ -19,7 +19,7 @@ class Solution:
         prev = None
         res = []
         for word in words:
-            sorted_word = sorted(word)
+            sorted_word = sorted_cust(word)
             if sorted_word != prev:
                 prev = sorted_word
                 res.append(word)
