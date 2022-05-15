@@ -1,7 +1,7 @@
 class Solution:
     def removeAnagrams(self, words: List[str]) -> List[str]:
         
-        def sorted(word):  # O(N)
+        def sorted1(word):  # O(N)
             d = {}
             for char in word:
                 if char not in d.keys():
@@ -16,15 +16,14 @@ class Solution:
 
             return ''.join(res)
 
-        
         prev = None
         res = []
         for word in words:
-            sorted_word = sorted(word)
+            sorted_word = sorted1(word)
             if sorted_word != prev:
                 prev = sorted_word
                 res.append(word)
         return (res)
 
 #Time:  O(N * M) / N = len(words), M = len(word)
-#Space: O(N * M) / N = len(words), M = len(word)
+#Space: O(M) / N = len(words), M = len(word)
