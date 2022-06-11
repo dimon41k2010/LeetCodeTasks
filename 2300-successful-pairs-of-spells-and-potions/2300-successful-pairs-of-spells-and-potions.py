@@ -13,7 +13,7 @@ class Solution:
                 else:
                     right = mid - 1
 
-            return len(potions)-left
+            return len(potions)-right-1
 
         return([count_pairs(potions, spell, success) for spell in spells])
 
