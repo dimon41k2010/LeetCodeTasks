@@ -12,3 +12,5 @@ class Solution:
         return True
     
     
+#Time: O(N * M) => O(N)
+#Space: O(1)
