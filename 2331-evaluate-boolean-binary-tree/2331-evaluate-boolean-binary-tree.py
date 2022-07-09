@@ -23,3 +23,8 @@ class Solution:
         return rec(root)
         
         
+#Time: O(N)
+#Space: O(N)
+
+        
+        
