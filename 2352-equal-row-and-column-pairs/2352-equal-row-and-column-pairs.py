@@ -26,7 +26,7 @@ class Solution:
         res = 0
         for key in count_row.keys():
             if key in count_col.keys():
-               res += count_row[key] * count_col[key]
+                res += count_row[key] * count_col[key]
         return (res)
 
     
