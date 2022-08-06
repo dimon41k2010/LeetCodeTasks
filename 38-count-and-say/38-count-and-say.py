@@ -1,5 +1,6 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
+        
         res = "1"
         
         def helper(s):
