@@ -9,3 +9,6 @@ class Solution:
             else:
                 return(True)
         return (False)
+    
+#Time: O(N)
+#Space: O(N)
