@@ -11,6 +11,7 @@ class Solution:
         max_num = max(nums)
         count_max_num = 0
         res = 0
+        
         for num in nums:
             if num == max_num:
                 count_max_num += 1
