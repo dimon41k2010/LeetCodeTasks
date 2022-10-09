@@ -5,8 +5,8 @@ class Solution:
             return []
         
         index = 0
-        
         res = []
+        
         for r in range(m):
             new_row = []
             for c in range(n):
@@ -15,4 +15,7 @@ class Solution:
             res.append(new_row) 
         return res
     
+
+#Time: O(N)
+#Space: O(1)
         
