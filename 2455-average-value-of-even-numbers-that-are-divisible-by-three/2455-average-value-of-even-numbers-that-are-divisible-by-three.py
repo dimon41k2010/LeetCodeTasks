@@ -9,3 +9,6 @@ class Solution:
 
         res = (sum_ // count) if count != 0 else 0
         return(res)
+    
+#Time: O(N)
+#Space: O(1)
