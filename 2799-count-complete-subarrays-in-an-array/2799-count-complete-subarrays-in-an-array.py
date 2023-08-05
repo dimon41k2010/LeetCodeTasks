@@ -30,3 +30,6 @@ class Solution:
             left += 1
 
         return (res)
+    
+# Time: O(N)
+# Space: O(N)
